@@ -38,6 +38,7 @@ export default async function PostCard({ post }: { post: Post }) {
             height={200}
           />
         </div>
+
         <div
           dangerouslySetInnerHTML={{ __html: post.title.rendered }}
           className="text-xl text-primary font-medium group-hover:underline decoration-muted-foreground underline-offset-4 decoration-dotted transition-all"
