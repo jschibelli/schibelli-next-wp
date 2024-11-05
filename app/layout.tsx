@@ -8,7 +8,7 @@ import "./globals.css";
 import { Button } from "@/components/ui/button";
 import { MobileNav } from "@/components/nav/mobile-nav";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
-import { Github, Twitter, Facebook } from "lucide-react";
+import { Github, Twitter, Facebook, Linkedin } from "lucide-react";
 import { Main } from "@/components/craft";
 import { mainMenu, contentMenu } from "@/menu.config";
 import { Section, Container } from "@/components/craft";
@@ -102,9 +102,9 @@ const Nav = ({ className, children, id }: NavProps) => {
               </Button>
             ))}
           </div>
-          <Button asChild className="hidden sm:flex">
+          {/* <Button asChild className="hidden sm:flex">
             <Link href="https://github.com/9d8dev/next-wp">Get Started</Link>
-          </Button>
+          </Button> */}
           <MobileNav />
         </div>
       </div>
@@ -151,19 +151,20 @@ const Footer = () => {
         <Container className="not-prose flex flex-col justify-between gap-6 border-t md:flex-row md:items-center md:gap-2">
           <div className="flex gap-2">
             <Button variant="outline" size="icon">
-              <Github />
+              <a href="https://github.com/jschibelli" target="_blank"><Github /></a>
             </Button>
             <Button variant="outline" size="icon">
-              <Twitter />
+              <a href="https://www.linkedin.com/in/johnschibelli/" target="_blank">
+                <Linkedin />
+              </a>
             </Button>
             <Button variant="outline" size="icon">
-              <Facebook />
+              <a href="https://www.facebook.com/profile.php?id=61564957240056" target="_blank"><Facebook /></a>
             </Button>
           </div>
           <p className="text-muted-foreground">
-            ©{" "}
-            <a href="https://github.com/brijr/components">brijr/components</a>.
-            All rights reserved. Schibelli.com 2024-present.
+            © <a href="https://github.com/brijr/components">Schibelli.com</a>
+            . All rights reserved. 2024-present.
           </p>
         </Container>
       </Section>

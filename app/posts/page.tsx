@@ -17,6 +17,7 @@ import {
 import { Section, Container } from "@/components/craft";
 import PostCard from "@/components/posts/post-card";
 import FilterPosts from "./filter";
+import Header from "@/components/header-two/header-two";
 
 export default async function Page({
   searchParams,
@@ -41,6 +42,7 @@ export default async function Page({
   return (
     <Section>
       <Container>
+
         <h1>Posts</h1>
         <FilterPosts
           authors={authors}
