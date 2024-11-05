@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import {
   getAllPosts,
   getAllAuthors,
@@ -19,7 +20,36 @@ import PostCard from "@/components/posts/post-card";
 import FilterPosts from "./filter";
 import Header from "@/components/header-two/header-two";
 
-export default async function Page({
+export const generateMetadata = async ({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | undefined };
+}): Promise<Metadata> => {
+  const { author, tag, category } = searchParams;
+  const posts = await getAllPosts({ author, tag, category });
+  const latestPost = posts[0];
+  const title = latestPost?.title?.rendered || "Posts";
+  const description = (latestPost as any)?.acf?.sub_heading || "";
+  const imageUrl =
+    (latestPost as any)?.yoast_head_json?.og_image?.[0]?.url ||
+    "/opengraph-image.jpg";
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: imageUrl,
+        },
+      ],
+    },
+  };
+};
+
+export default async function PostsPage({
   searchParams,
 }: {
   searchParams: { [key: string]: string | undefined };
@@ -42,7 +72,6 @@ export default async function Page({
   return (
     <Section>
       <Container>
-
         <h1>Posts</h1>
         <FilterPosts
           authors={authors}
@@ -78,11 +107,7 @@ export default async function Page({
                   }`}
                 />
               </PaginationItem>
-              <PaginationItem>
-                <PaginationLink href={`/posts?page=${page}`}>
-                  {page}
-                </PaginationLink>
-              </PaginationItem>
+
               <PaginationItem>
                 <PaginationNext
                   className={
