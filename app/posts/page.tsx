@@ -18,7 +18,7 @@ import {
 import { Section, Container } from "@/components/craft";
 import PostCard from "@/components/posts/post-card";
 import FilterPosts from "./filter";
-import Header from "@/components/header-two/header-two";
+import Header from "@/components/cta/homepage-cta";
 
 export const generateMetadata = async ({
   searchParams,

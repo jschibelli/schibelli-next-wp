@@ -4,7 +4,7 @@ import Image from "next/image";
 
 // Third-party library imports
 import Balancer from "react-wrap-balancer";
-import { Camera } from "lucide-react";
+import { FileDown } from "lucide-react";
 
 // Local component imports
 import { Section, Container } from "@/components/craft";
@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 // Asset imports
 import Logo from "@/public/logo.png";
 
-const Hero = () => {
+const HomepageHero = () => {
   return (
     <Section>
       <Container className="flex flex-col items-center text-center">
@@ -25,28 +25,29 @@ const Hero = () => {
           className="not-prose mb-6 dark:invert md:mb-8"
         /> */}
         <h1 className="!mb-0">
-          <Balancer>Innovative Web Development & AI Solutions</Balancer>
+          <Balancer>
+            Elevate Your Digital Presence with Expert Full-Stack Development
+          </Balancer>
         </h1>
         <h3 className="text-muted-foreground">
           <Balancer>
-            Empowering Digital Experiences with Modern Technology and Smart AI
-            Integration
+            Transforming ideas into scalable and efficient applications.
           </Balancer>
         </h3>
-        {/* <div className="not-prose mt-6 flex gap-2 md:mt-12">
+        <div className="not-prose mt-6 flex gap-2 md:mt-12">
           <Button asChild>
             <Link href="/">
-              <Camera className="mr-2" />
-              Lorem Ipsum
+              <FileDown className="mr-2" />
+              Download Resume
             </Link>
           </Button>
           <Button variant={"ghost"} asChild>
-            <Link href="/posts">Dolor Sit Amet -{">"}</Link>
+            <Link href="/pages/contact">Get in Touch -{">"}</Link>
           </Button>
-        </div> */}
+        </div>
       </Container>
     </Section>
   );
 };
 
-export default Hero;
+export default HomepageHero;

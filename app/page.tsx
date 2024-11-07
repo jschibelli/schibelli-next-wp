@@ -4,18 +4,24 @@ import Balancer from "react-wrap-balancer";
 
 // Components
 import Link from "next/link";
-import Header from "@/components/header-two/header-two"; // Adjust the import path as necessary
+import HomepageHero from "@/components/cta/homepage-cta"; // Adjust the import path as necessary
+import HomepageFeature from "@/components/features/homepage-feature";
+import SubscribeCTA from "@/components/cta/subscribe-cta";
 
 // Icons
 import { File, Pen, Tag, Boxes, User, Folder } from "lucide-react";
+
+
 
 // This page is using the craft.tsx component and design system
 export default function Home() {
   return (
     <Section>
       <Container>
-        <Header />
-        <ExampleJsx />
+        <HomepageHero />
+        <HomepageFeature />
+        <SubscribeCTA />
+        {/* <ExampleJsx /> */}
       </Container>
     </Section>
   );
