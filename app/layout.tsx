@@ -133,8 +133,8 @@ const Nav = ({ className, children, id }: NavProps) => {
 //             </Link>
 //             <p>
 //               <Balancer>
-//                 Stay Connected with My Journey in Tech & AI! Follow Me on Social
-//                 Media for Insights, Tips, and Behind-the-Scenes Projects.
+                // Stay Connected with My Journey in Tech & AI! Follow Me on Social
+                // Media for Insights, Tips, and Behind-the-Scenes Projects.
 //               </Balancer>
 //             </p>
 //           </div>
@@ -152,29 +152,29 @@ const Nav = ({ className, children, id }: NavProps) => {
 //           </div>
 //         </Container>
 //         <Container className="not-prose flex flex-col justify-between gap-6 border-t md:flex-row md:items-center md:gap-2">
-//           <div className="flex gap-2">
-//             <Button variant="outline" size="icon">
-//               <a href="https://github.com/jschibelli" target="_blank">
-//                 <Github />
-//               </a>
-//             </Button>
-//             <Button variant="outline" size="icon">
-//               <a
-//                 href="https://www.linkedin.com/in/johnschibelli/"
-//                 target="_blank"
-//               >
-//                 <Linkedin />
-//               </a>
-//             </Button>
-//             <Button variant="outline" size="icon">
-//               <a
-//                 href="https://www.facebook.com/profile.php?id=61564957240056"
-//                 target="_blank"
-//               >
-//                 <Facebook />
-//               </a>
-//             </Button>
-//           </div>
+          // <div className="flex gap-2">
+          //   <Button variant="outline" size="icon">
+          //     <a href="https://github.com/jschibelli" target="_blank">
+          //       <Github />
+          //     </a>
+          //   </Button>
+          //   <Button variant="outline" size="icon">
+          //     <a
+          //       href="https://www.linkedin.com/in/johnschibelli/"
+          //       target="_blank"
+          //     >
+          //       <Linkedin />
+          //     </a>
+          //   </Button>
+          //   <Button variant="outline" size="icon">
+          //     <a
+          //       href="https://www.facebook.com/profile.php?id=61564957240056"
+          //       target="_blank"
+          //     >
+          //       <Facebook />
+          //     </a>
+          //   </Button>
+          // </div>
 //           <p className="text-muted-foreground">
 //             © <a href="https://github.com/brijr/components">Schibelli.com</a>.
 //             All rights reserved. 2024-present.
