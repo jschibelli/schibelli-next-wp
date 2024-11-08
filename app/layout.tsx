@@ -30,17 +30,17 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: "Schibelli.com",
   description:
-    "Elevate Your Digital Presence with Expert Full-Stack Development",
-  metadataBase: new URL("https://schibelli.com"),
+    "A starter template for Next.js with WordPress as a headless CMS.",
+  metadataBase: new URL(process.env.SITE_URL),
   openGraph: {
     title: "Schibelli.com",
     description:
       "A starter template for Next.js with WordPress as a headless CMS.",
-    url: "https://schibelli.com",
+    url: process.env.SITE_URL,
     siteName: "Schibelli.com",
     images: [
       {
-        url: "https://schibelli.com/og-image.jpg",
+        url: `${process.env.SITE_URL}/og-image.jpg`,
         width: 800,
         height: 600,
         alt: "Schibelli.com",
@@ -48,6 +48,14 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@your_twitter_handle",
+    title: "Schibelli.com",
+    description:
+      "A starter template for Next.js with WordPress as a headless CMS.",
+    image: `${process.env.SITE_URL}/og-image.jpg`,
   },
 };
 
