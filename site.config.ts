@@ -3,5 +3,5 @@ type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  site_domain: "https://schibelli-next-wp.vercel.app",
+  site_domain: "https://schibelli.com",
 };

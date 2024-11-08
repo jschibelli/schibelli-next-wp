@@ -27,12 +27,32 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
+const siteUrl = process.env.SITE_URL || "https://schibelli.com";
+
 export const metadata: Metadata = {
   title: "Schibelli.com",
   description:
-    "A starter template for Next.js with WordPress as a headless CMS.",
-  metadataBase: new URL("https://wp.9d8.dev"),
+    "Elevate Your Digital Presence with Expert Full-Stack Development",
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    title: "Schibelli.com",
+    description:
+      "A starter template for Next.js with WordPress as a headless CMS.",
+    url: process.env.SITE_URL,
+    siteName: "Schibelli.com",
+    images: [
+      {
+        url: `${siteUrl}/og-image.jpg`,
+        width: 800,
+        height: 600,
+        alt: "Schibelli.com",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
+
 
 // Revalidate content every hour
 export const revalidate = 3600;
@@ -84,7 +104,7 @@ const Nav = ({ className, children, id }: NavProps) => {
           className="hover:opacity-75 transition-all flex gap-2 items-center"
           href="/"
         >
-          <h2 className="sr-only">next-wp starter</h2>
+          <h2 className="sr-only">Schibelli.com</h2>
           <Image
             src={Logo}
             alt="Logo"
