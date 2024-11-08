@@ -21,6 +21,7 @@ import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import FooterSubscribe from "@/components/footers/footer-subscribe";
+import { Analytics } from "@vercel/analytics/react";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -57,6 +58,7 @@ export default function RootLayout({
           <Nav />
           <Main>{children}</Main>
           <FooterSubscribe />
+          <Analytics />
         </ThemeProvider>
         <Analytics />
       </body>
