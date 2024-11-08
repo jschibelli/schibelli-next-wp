@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Schibelli.com",
     images: [
       {
-        url: `${siteUrl}/og-image.jpg`,
+        url: `${siteUrl}/opengraph-image.jpg`,
         width: 800,
         height: 600,
         alt: "Schibelli.com",
@@ -50,6 +50,8 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
+    subtitle:
+      "Essential Tips for Future-Proofing Your Website and Handling Growth Like a Pro", // Add the subtitle here
   },
 };
 
