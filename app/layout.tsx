@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import { Analytics } from "@vercel/analytics/react";
 
 import "./globals.css";
 
@@ -21,6 +20,7 @@ import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import FooterSubscribe from "@/components/footers/footer-subscribe";
+import { Analytics } from "@vercel/analytics/react";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -28,7 +28,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "WordPress & Next.js Starter by 9d8",
+  title: "Schibelli.com",
   description:
     "A starter template for Next.js with WordPress as a headless CMS.",
   metadataBase: new URL("https://wp.9d8.dev"),
@@ -57,6 +57,7 @@ export default function RootLayout({
           <Nav />
           <Main>{children}</Main>
           <FooterSubscribe />
+
         </ThemeProvider>
         <Analytics />
       </body>
