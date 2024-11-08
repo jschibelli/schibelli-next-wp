@@ -9,10 +9,10 @@ const Header = () => {
   return (
     <Section>
       <Container className="flex flex-col text-center">
-        <h1 className="!mb-0">Let's Connect</h1>
+        <h1 className="!mb-0">Let&apos;s Connect</h1>
         <h3 className="text-muted-foreground">
           <Balancer>
-            I'm always excited to discuss new projects, creative ideas, or
+            I&apos;m always excited to discuss new projects, creative ideas, or
             opportunities to be part of your visions.
           </Balancer>
         </h3>

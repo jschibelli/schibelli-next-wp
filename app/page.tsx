@@ -10,6 +10,7 @@ import HomepageFeature from "@/components/features/homepage-feature";
 
 // Icons
 import { File, Pen, Tag, Boxes, User, Folder } from "lucide-react";
+import CalendlyPopup from "@/components/calendly/CalendlyPopup";
 
 
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Container>
         <HomepageHero />
         <HomepageFeature />
+        <CalendlyPopup />
         {/* <SubscribeCTA /> */}
         {/* <ExampleJsx /> */}
       </Container>
