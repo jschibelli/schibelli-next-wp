@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     "Elevate Your Digital Presence with Expert Full-Stack Development",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Schibelli.com",
+    title: "Building a Scalable Website: Key Considerations for Developers",
     description:
-      "A starter template for Next.js with WordPress as a headless CMS.",
+      "Essential Tips for Future-Proofing Your Website and Handling Growth Like a Pro",
     url: process.env.SITE_URL,
     siteName: "Schibelli.com",
     images: [
