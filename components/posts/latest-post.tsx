@@ -1,17 +1,33 @@
-import Image from "next/image";
-import Link from "next/link";
-
-import { Post } from "@/lib/wordpress.d";
-import { cn } from "@/lib/utils";
-
 import {
+  getPostBySlug,
   getFeaturedMediaById,
   getAuthorById,
   getCategoryById,
 } from "@/lib/wordpress";
 
-export default async function LatestPost({ post }: { post: Post }) {
-  const media = await getFeaturedMediaById(post.featured_media);
+import { Section, Container, Article, Main } from "@/components/craft";
+import { Metadata } from "next";
+import { badgeVariants } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
+
+import Link from "next/link";
+import Balancer from "react-wrap-balancer";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const post = await getPostBySlug(params.slug);
+  return {
+    title: post.title.rendered,
+    description: post.excerpt.rendered,
+  };
+}
+
+export default async function LatestPost({ params }: { params: { slug: string } }) {
+  const post = await getPostBySlug(params.slug);
+  const featuredMedia = await getFeaturedMediaById(post.featured_media);
   const author = await getAuthorById(post.author);
   const date = new Date(post.date).toLocaleDateString("en-US", {
     month: "long",
@@ -21,46 +37,50 @@ export default async function LatestPost({ post }: { post: Post }) {
   const category = await getCategoryById(post.categories[0]);
 
   return (
-    <Link
-      href={`/posts/${post.slug}`}
-      className={cn(
-        "border p-4 bg-accent/30 rounded-lg group flex justify-between flex-col not-prose gap-8",
-        "hover:bg-accent/75 transition-all"
-      )}
-    >
-      <div
-          dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-          className="text-xl text-primary font-medium group-hover:underline decoration-muted-foreground underline-offset-4 decoration-dotted transition-all"
-        ></div>
-      <div className="flex flex-col gap-4">
-        <div className=" w-full overflow-hidden relative rounded-md border flex items-center justify-center">
-          <Image
-            className="h-full w-full object-cover"
-            src={media.source_url}
+    <Section>
+      <Container>
+        <h1>
+          <Balancer>
+            <span
+              dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+            ></span>
+          </Balancer>
+        </h1>
+
+        <h3 className="text-muted text-gray-600">
+
+            <span
+              dangerouslySetInnerHTML={{ __html: post.acf.sub_heading}}
+            ></span>
+
+        </h3>
+
+        <div className="flex justify-between items-center gap-4 text-sm mb-4">
+          <h5>
+            Published {date} by{" "}
+            {author.name && (
+              <span>
+                <a href={`/posts/?author=${author.id}`}>{author.name}</a>{" "}
+              </span>
+            )}
+          </h5>
+          <Link
+            href={`/posts/?category=${category.id}`}
+            className={cn(badgeVariants({ variant: "outline" }), "not-prose")}
+          >
+            {category.name}
+          </Link>
+        </div>
+        <div className="h-96 my-12 md:h-[560px] overflow-hidden flex items-center justify-center border rounded-lg bg-accent/25">
+          {/* eslint-disable-next-line */}
+          <img
+            className="w-full"
+            src={featuredMedia.source_url}
             alt={post.title.rendered}
-            width={1920}
-            height={1080}
           />
         </div>
-
-
-        <div
-          className="text-sm"
-          dangerouslySetInnerHTML={{
-            __html:
-              post.excerpt.rendered.split(" ").slice(0, 12).join(" ").trim() +
-              "...",
-          }}
-        ></div>
-      </div>
-
-      <div className="flex flex-col gap-4">
-        <hr />
-        <div className="flex justify-between items-center text-xs">
-          <p>{category.name}</p>
-          <p>{date}</p>
-        </div>
-      </div>
-    </Link>
+        {/* <Article dangerouslySetInnerHTML={{ __html: post.content.rendered }} /> */}
+      </Container>
+    </Section>
   );
 }

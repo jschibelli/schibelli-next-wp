@@ -46,6 +46,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
             ></span>
           </Balancer>
         </h1>
+        <h3>
+          <Balancer>
+            <span
+              dangerouslySetInnerHTML={{ __html: post.acf.sub_heading }}
+            ></span>
+          </Balancer>
+        </h3>
 
         <div className="flex justify-between items-center gap-4 text-sm mb-4">
           <h5>

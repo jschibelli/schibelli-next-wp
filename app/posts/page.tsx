@@ -42,7 +42,7 @@ export default async function Page({
   return (
     <Section>
       <Container>
-        <LatestPost post={posts[0]} />
+        {/* <LatestPost params={{ slug: posts[0].slug }} /> */}
         <h1>Posts</h1>
         <FilterPosts
           authors={authors}
