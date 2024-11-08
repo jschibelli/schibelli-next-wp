@@ -30,7 +30,7 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: "Schibelli.com",
   description:
-    "A starter template for Next.js with WordPress as a headless CMS.",
+    "Elevate Your Digital Presence with Expert Full-Stack Development",
   metadataBase: new URL(process.env.SITE_URL),
   openGraph: {
     title: "Schibelli.com",
