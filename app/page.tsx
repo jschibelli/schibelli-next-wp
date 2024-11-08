@@ -6,7 +6,7 @@ import Balancer from "react-wrap-balancer";
 import Link from "next/link";
 import HomepageHero from "@/components/cta/homepage-cta"; // Adjust the import path as necessary
 import HomepageFeature from "@/components/features/homepage-feature";
-import SubscribeCTA from "@/components/cta/subscribe-cta";
+// import SubscribeCTA from "@/components/cta/subscribe-cta";
 
 // Icons
 import { File, Pen, Tag, Boxes, User, Folder } from "lucide-react";
@@ -20,7 +20,7 @@ export default function Home() {
       <Container>
         <HomepageHero />
         <HomepageFeature />
-        <SubscribeCTA />
+        {/* <SubscribeCTA /> */}
         {/* <ExampleJsx /> */}
       </Container>
     </Section>

@@ -3,7 +3,7 @@ export const mainMenu = {
   home: "/",
   about: "/pages/about-me/",
   blog: "/posts",
-  contact: "/pages/contact/",
+  contact: "/contact/",
 };
 
 export const contentMenu = {
