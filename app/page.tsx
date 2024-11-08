@@ -20,7 +20,7 @@ export default function Home() {
     <Section>
       <Container>
         <HomepageHero />
-        <HomepageFeature />
+        {/* <HomepageFeature /> */}
         <CalendlyPopup />
         {/* <SubscribeCTA /> */}
         {/* <ExampleJsx /> */}

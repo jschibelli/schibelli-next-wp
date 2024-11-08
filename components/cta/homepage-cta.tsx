@@ -42,7 +42,7 @@ const HomepageHero = () => {
             </Link>
           </Button>
           <Button variant={"ghost"} asChild>
-            <Link href="/pages/contact">Get in Touch -{">"}</Link>
+            <Link href="/contact">Get in Touch -{">"}</Link>
           </Button>
         </div>
       </Container>

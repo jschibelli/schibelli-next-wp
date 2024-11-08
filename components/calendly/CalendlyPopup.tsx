@@ -62,7 +62,7 @@ const CalendlyPopup = () => {
 
   return (
     <div>
-      <button onClick={openPopup}>Schedule a Meeting</button>
+      {/* <button onClick={openPopup}>Schedule a Meeting</button> */}
     </div>
   );
 };
