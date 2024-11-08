@@ -36,7 +36,7 @@ const HomepageHero = () => {
         </h3>
         <div className="not-prose mt-6 flex gap-2 md:mt-12">
           <Button asChild>
-            <Link href="/">
+            <Link href="https://intrawebtech.com/wp-content/uploads/2024/11/John-Schibelli-Resume-Novemberr-2024.pdf">
               <FileDown className="mr-2" />
               Download Resume
             </Link>
