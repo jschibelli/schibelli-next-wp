@@ -1,4 +1,5 @@
 export type Post = {
+  [x: string]: any;
   id: number;
   date: string;
   date_gmt: string;

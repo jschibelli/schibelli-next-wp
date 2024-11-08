@@ -25,7 +25,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function LatestPost({ params }: { params: { slug: string } }) {
   const post = await getPostBySlug(params.slug);
   const featuredMedia = await getFeaturedMediaById(post.featured_media);
   const author = await getAuthorById(post.author);
@@ -46,12 +46,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
             ></span>
           </Balancer>
         </h1>
-        <h3>
-          <Balancer>
+
+        <h3 className="text-muted text-gray-600">
+
             <span
-              dangerouslySetInnerHTML={{ __html: post.acf.sub_heading }}
+              dangerouslySetInnerHTML={{ __html: post.acf.sub_heading}}
             ></span>
-          </Balancer>
+
         </h3>
 
         <div className="flex justify-between items-center gap-4 text-sm mb-4">
@@ -78,7 +79,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             alt={post.title.rendered}
           />
         </div>
-        <Article dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+        {/* <Article dangerouslySetInnerHTML={{ __html: post.content.rendered }} /> */}
       </Container>
     </Section>
   );
