@@ -11,7 +11,7 @@ import HomepageFeature from "@/components/features/homepage-feature";
 // Icons
 import { File, Pen, Tag, Boxes, User, Folder } from "lucide-react";
 import CalendlyPopup from "@/components/calendly/CalendlyPopup";
-import { Analytics } from "@vercel/analytics/react";
+
 
 
 
@@ -25,7 +25,6 @@ export default function Home() {
         <CalendlyPopup />
         {/* <SubscribeCTA /> */}
         {/* <ExampleJsx /> */}
-        <Analytics />
       </Container>
     </Section>
   );
