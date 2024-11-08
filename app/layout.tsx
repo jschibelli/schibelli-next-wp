@@ -27,11 +27,13 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
+const siteUrl = process.env.SITE_URL || "https://schibelli.com";
+
 export const metadata: Metadata = {
   title: "Schibelli.com",
   description:
     "Elevate Your Digital Presence with Expert Full-Stack Development",
-  metadataBase: new URL(process.env.SITE_URL),
+  metadataBase: new URL(siteUrl),
   openGraph: {
     title: "Schibelli.com",
     description:
@@ -40,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Schibelli.com",
     images: [
       {
-        url: `${process.env.SITE_URL}/og-image.jpg`,
+        url: `${siteUrl}/og-image.jpg`,
         width: 800,
         height: 600,
         alt: "Schibelli.com",
@@ -48,14 +50,6 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@your_twitter_handle",
-    title: "Schibelli.com",
-    description:
-      "A starter template for Next.js with WordPress as a headless CMS.",
-    image: `${process.env.SITE_URL}/og-image.jpg`,
   },
 };
 
