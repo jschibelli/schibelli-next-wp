@@ -21,6 +21,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import FooterSubscribe from "@/components/footers/footer-subscribe";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -38,8 +39,7 @@ export const metadata: Metadata = {
     title: "Optimizing React Applications for Better Performance",
     description:
       "Exploring techniques to enhance the speed and efficiency of React apps.",
-
-    url: process.env.SITE_URL,
+    url: siteUrl,
     siteName: "Schibelli.com",
     images: [
       {
@@ -78,9 +78,9 @@ export default function RootLayout({
           <Nav />
           <Main>{children}</Main>
           <FooterSubscribe />
-
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
