@@ -35,14 +35,15 @@ export const metadata: Metadata = {
     "Elevate Your Digital Presence with Expert Full-Stack Development",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Building a Scalable Website: Key Considerations for Developers",
+    title: "Optimizing React Applications for Better Performance",
     description:
-      "Essential Tips for Future-Proofing Your Website and Handling Growth Like a Pro",
+      "Exploring techniques to enhance the speed and efficiency of React apps.",
+
     url: process.env.SITE_URL,
     siteName: "Schibelli.com",
     images: [
       {
-        url: `${siteUrl}/og-image.jpg`,
+        url: `${siteUrl}/opengraph-image.jpg`,
         width: 800,
         height: 600,
         alt: "Schibelli.com",
