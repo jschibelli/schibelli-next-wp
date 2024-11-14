@@ -20,8 +20,9 @@ import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import FooterSubscribe from "@/components/footers/footer-subscribe";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
+// import { Analytics } from "@vercel/analytics/react";
+// import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -79,8 +80,9 @@ export default function RootLayout({
           <Main>{children}</Main>
           <FooterSubscribe />
         </ThemeProvider>
-        <Analytics />
-        <SpeedInsights />
+        <GoogleAnalytics gaId="G-GQVLMTNPZM" />
+        {/* <Analytics />
+        <SpeedInsights /> */}
       </body>
     </html>
   );
