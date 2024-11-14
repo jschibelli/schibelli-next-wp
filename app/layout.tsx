@@ -20,7 +20,7 @@ import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import FooterSubscribe from "@/components/footers/footer-subscribe";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 // import { Analytics } from "@vercel/analytics/react";
 // import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -67,9 +67,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
+      {/* Google */}
+      <GoogleAnalytics gaId="G-GQVLMTNPZM" />
+      <GoogleTagManager gtmId="GTM-MWFH9J9B" />
+
       <body
-        className={cn("min-h-screen font-sans antialiased", fontSans.variable)}
-      >
+        className={cn("min-h-screen font-sans antialiased", fontSans.variable)} >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -80,9 +83,7 @@ export default function RootLayout({
           <Main>{children}</Main>
           <FooterSubscribe />
         </ThemeProvider>
-        <GoogleAnalytics gaId="G-GQVLMTNPZM" />
-        {/* <Analytics />
-        <SpeedInsights /> */}
+
       </body>
     </html>
   );
