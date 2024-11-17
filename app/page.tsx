@@ -22,7 +22,7 @@ export default function Home() {
       <Container>
         <HomepageHero />
         {/* <HomepageFeature /> */}
-        {/* <CalendlyPopup /> */}
+        <CalendlyPopup />
         {/* <SubscribeCTA /> */}
         {/* <ExampleJsx /> */}
       </Container>
