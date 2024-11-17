@@ -2,17 +2,16 @@ import { BrowserContextOptions, defineConfig, devices } from "@playwright/test";
 
 const baseURL =
   process.env.TARGET_ENV === "production"
-    ? "https://schibelli.com/"
-    : "https://schibelli.com/";
+    ? "https://www.schibelli.com/"
+    : "https://www.schibelli.com/";
 
 const testSuite =
   process.env.TEST_SUITE === "allTests"
-    ? "scenerios/regressionSuite/site"
-    : process.env.TEST_SUITE === "sanity"
-    ? "scenerios/sanitySuite/site/sanity"
-    : process.env.TEST_SUITE === "smoke"
-    ? "scenerios/smokeSuite/site/smoke"
-    : "scenerios/regressionSuite/smoke";
+    ? "e2e/"
+    : "e2e/"
+  process.env.TEST_SUITE === "sanity"
+    ? "e2e/sanity"
+    : "e2e/sanity";
 
 const isCi = process.env.CI === "true";
 const isDevelopment = process.env.DEVELOPMENT === "true";
