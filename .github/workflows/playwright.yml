@@ -17,13 +17,14 @@ jobs:
       run: npm install -g pnpm && pnpm install
     - name: Install Playwright Browsers
       run: pnpm exec playwright install --with-deps
+    - name: Set environment variables
+      run: echo "WORDPRESS_HOSTNAME=schibelli.com" >> $GITHUB_ENV
     - name: Run Playwright tests
       run: pnpm exec playwright test
-    - name: Set environment variables
-      run: echo "WORDPRESS_HOSTNAME=https://schibelli.com" >> $GITHUB_ENV
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+
