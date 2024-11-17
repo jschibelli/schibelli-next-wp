@@ -5,6 +5,10 @@ on:
   pull_request:
     branches: [ main, master ]
 jobs:
+    build:
+    runs-on: ubuntu-latest
+    env:
+      WORDPRESS_HOSTNAME: https://www.schibelli.com
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
