@@ -19,6 +19,8 @@ jobs:
       run: pnpm exec playwright install --with-deps
     - name: Run Playwright tests
       run: pnpm exec playwright test
+    - name: Set environment variables
+      run: echo "WORDPRESS_HOSTNAME=https://schibelli.com" >> $GITHUB_ENV
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
