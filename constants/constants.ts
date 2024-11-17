@@ -1,3 +1,5 @@
+import HomepageHero from "@/components/cta/homepage-cta";
+
 export const ATTRIBUTE_NAME = {
   itemPrice: `data-item-detail-price`,
   itemName: `data-item-detail-name`,
@@ -31,18 +33,7 @@ function getMonthName() {
 
 export const VALIDATION_TEXT = (options: any): Record<string, string> => {
   return {
-    bagWithoutItems: `You don't have any items in your cart yet.`,
-    orderConfirmation: `We have received your order.`,
-    joinPageTitle: `Become a Color Street Stylist`,
-    joinPageSectionTitles: `Why Become a Stylist? Starter Kit - $99 ($316+ Value) Get Off to a Jump Start! Love Color Street?`,
-    hostPageSectionTitles: `Book Your Nail Bar! #BeBrilliant #BeColorStreet`,
-    colorPlayPageSectionTitles: `What is Color Play?`,
-    applicationPageSectionTitles: `Easy Application`,
-    aboutPageSectionTitles: `About Color Street`,
-    givingBackPageSectionTitles: `Causes & Foundation Partners`,
-    enrollmentComplete: `Enrollment Complete`,
-    printInvoice: `Print invoice`,
-    starterKitValue: getStarterKitValue(options.market),
+    homepageHero: `Elevate Your Digital Presence with Expert Full-Stack Development`,
   };
 };
 
