@@ -8,7 +8,7 @@ jobs:
     build:
     runs-on: ubuntu-latest
     env:
-      WORDPRESS_HOSTNAME: https://www.schibelli.com
+      WORDPRESS_HOSTNAME: https://wwschibelli.com
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
