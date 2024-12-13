@@ -29,32 +29,31 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-const siteUrl = process.env.SITE_URL || "https://schibelli.com";
+const siteUrl = process.env.SITE_URL || "https://schibelli.dev";
 
 export const metadata: Metadata = {
-  title: "Schibelli.com",
+  title: "Schibelli.dev",
   description:
     "Elevate Your Digital Presence with Expert Full-Stack Development",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Optimizing React Applications for Better Performance",
+    title: "The Power of Quiet Observation",
     description:
-      "Exploring techniques to enhance the speed and efficiency of React apps.",
+      "Instead of yielding to the pressure to share every thought, discover the strength in quiet observation. Embrace empathy, build trust through thoughtful silence, and navigate life’s layers with authenticity.",
     url: siteUrl,
-    siteName: "Schibelli.com",
+    siteName: "Schibelli.dev",
     images: [
       {
         url: `${siteUrl}/opengraph-image.jpg`,
         width: 800,
         height: 600,
-        alt: "Schibelli.com",
+        alt: "Schibelli.dev",
       },
     ],
     locale: "en_US",
     type: "website",
   },
 };
-
 
 // Revalidate content every hour
 export const revalidate = 3600;
@@ -72,7 +71,8 @@ export default function RootLayout({
       <GoogleTagManager gtmId="GTM-MWFH9J9B" />
 
       <body
-        className={cn("min-h-screen font-sans antialiased", fontSans.variable)} >
+        className={cn("min-h-screen font-sans antialiased", fontSans.variable)}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -83,7 +83,6 @@ export default function RootLayout({
           <Main>{children}</Main>
           <FooterSubscribe />
         </ThemeProvider>
-
       </body>
     </html>
   );
@@ -96,7 +95,7 @@ const Nav = ({ className, children, id }: NavProps) => {
         "sticky z-50 top-0 bg-background",
         "border-b",
         "fade-in",
-        className,
+        className
       )}
       id={id}
     >
@@ -108,7 +107,7 @@ const Nav = ({ className, children, id }: NavProps) => {
           className="hover:opacity-75 transition-all flex gap-2 items-center"
           href="/"
         >
-          <h2 className="sr-only">Schibelli.com</h2>
+          <h2 className="sr-only">Schibelli.dev</h2>
           <Image
             src={Logo}
             alt="Logo"
@@ -138,7 +137,7 @@ const Nav = ({ className, children, id }: NavProps) => {
   );
 };
 
-<FooterSubscribe />
+<FooterSubscribe />;
 
 // const Footer = () => {
 //   return (
@@ -158,8 +157,8 @@ const Nav = ({ className, children, id }: NavProps) => {
 //             </Link>
 //             <p>
 //               <Balancer>
-                // Stay Connected with My Journey in Tech & AI! Follow Me on Social
-                // Media for Insights, Tips, and Behind-the-Scenes Projects.
+// Stay Connected with My Journey in Tech & AI! Follow Me on Social
+// Media for Insights, Tips, and Behind-the-Scenes Projects.
 //               </Balancer>
 //             </p>
 //           </div>
@@ -177,29 +176,29 @@ const Nav = ({ className, children, id }: NavProps) => {
 //           </div>
 //         </Container>
 //         <Container className="not-prose flex flex-col justify-between gap-6 border-t md:flex-row md:items-center md:gap-2">
-          // <div className="flex gap-2">
-          //   <Button variant="outline" size="icon">
-          //     <a href="https://github.com/jschibelli" target="_blank">
-          //       <Github />
-          //     </a>
-          //   </Button>
-          //   <Button variant="outline" size="icon">
-          //     <a
-          //       href="https://www.linkedin.com/in/johnschibelli/"
-          //       target="_blank"
-          //     >
-          //       <Linkedin />
-          //     </a>
-          //   </Button>
-          //   <Button variant="outline" size="icon">
-          //     <a
-          //       href="https://www.facebook.com/profile.php?id=61564957240056"
-          //       target="_blank"
-          //     >
-          //       <Facebook />
-          //     </a>
-          //   </Button>
-          // </div>
+// <div className="flex gap-2">
+//   <Button variant="outline" size="icon">
+//     <a href="https://github.com/jschibelli" target="_blank">
+//       <Github />
+//     </a>
+//   </Button>
+//   <Button variant="outline" size="icon">
+//     <a
+//       href="https://www.linkedin.com/in/johnschibelli/"
+//       target="_blank"
+//     >
+//       <Linkedin />
+//     </a>
+//   </Button>
+//   <Button variant="outline" size="icon">
+//     <a
+//       href="https://www.facebook.com/profile.php?id=61564957240056"
+//       target="_blank"
+//     >
+//       <Facebook />
+//     </a>
+//   </Button>
+// </div>
 //           <p className="text-muted-foreground">
 //             © <a href="https://github.com/brijr/components">Schibelli.com</a>.
 //             All rights reserved. 2024-present.
@@ -209,10 +208,3 @@ const Nav = ({ className, children, id }: NavProps) => {
 //     </footer>
 //   );
 // };
-
-
-
-
-
-
-
