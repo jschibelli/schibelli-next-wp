@@ -29,25 +29,25 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-const siteUrl = process.env.SITE_URL || "https://schibelli.com";
+const siteUrl = process.env.SITE_URL || "https://schibelli.dev";
 
 export const metadata: Metadata = {
-  title: "Schibelli.com",
+  title: "Schibelli.dev",
   description:
     "Elevate Your Digital Presence with Expert Full-Stack Development",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Optimizing React Applications for Better Performance",
+    title: "The Power of Quiet Observation",
     description:
-      "Exploring techniques to enhance the speed and efficiency of React apps.",
+      "Instead of yielding to the pressure to share every thought, discover the strength in quiet observation. Embrace empathy, build trust through thoughtful silence, and navigate life’s layers with authenticity.",
     url: siteUrl,
-    siteName: "Schibelli.com",
+    siteName: "Schibelli.dev",
     images: [
       {
         url: `${siteUrl}/opengraph-image.jpg`,
         width: 800,
         height: 600,
-        alt: "Schibelli.com",
+        alt: "Schibelli.dev",
       },
     ],
     locale: "en_US",
